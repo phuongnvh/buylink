@@ -11,7 +11,7 @@
                     <h4 class="border-bold">Nạp tiền bằng thẻ coupon của Buylink</h4>
                     <div class="full" id="content">
                         {if $msn}<div class="alert-success alert">{$msn}</div>{/if}
-                        {if $error}<div class="alert-danger alert">{$msn}</div>{/if}
+                        {if $error}<div class="alert-danger alert">{$error}</div>{/if}
                         <div class="clear"></div>
                         <form class="form-horizontal" method="post" action="" id="link-filter">
                             <div class="form-group">

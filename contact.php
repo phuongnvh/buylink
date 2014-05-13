@@ -15,8 +15,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' && $_POST['action']=="submit"){
     $body = $data['body'];
     
     $from    = $email;
-    $to      = 'support@textlink.vn';
-    $subject = 'Contact from TextLink: '.$subject;
+    $to      = 'support@buylink.vn';
+    $subject = 'Contact from BuyLink: '.$subject;
     $message = '<p>Name: '.$name.'</p>
         <p>Email: '.$email.'</p>
         
@@ -26,11 +26,11 @@ if($_SERVER['REQUEST_METHOD']=='POST' && $_POST['action']=="submit"){
         'X-Mailer: PHP/' . phpversion();
     
     mail($to, $subject, $message, $headers);
-    $smarty->assign('msg_contact', 'Liên hệ của bạn đã được gửi. Cám ơn bạn đã quan tâm đến TextLink.');
+    $smarty->assign('msg_contact', 'Liên hệ của bạn đã được gửi. Cám ơn bạn đã quan tâm đến BuyLink.');
     
 }
-$meta[title] ='Hãy liên hệ với chúng tôi - Textlink.vn';
-$meta[des] ='Nếu bạn gặp bất kỳ vấn đề gì trong quá trình sử dụng Textlink.vn, xin hãy vui lòng liên hệ với chúng tôi qua email hoặc số điện thoại hotline - Mỗi câu hỏi của các bạn là một cơ hội để chúng tôi nâng cao dịch vụ chăm sóc khách hàng!.';
+$meta[title] ='Hãy liên hệ với chúng tôi - BuyLink.vn';
+$meta[des] ='Nếu bạn gặp bất kỳ vấn đề gì trong quá trình sử dụng BuyLink.vn, xin hãy vui lòng liên hệ với chúng tôi qua email hoặc số điện thoại hotline - Mỗi câu hỏi của các bạn là một cơ hội để chúng tôi nâng cao dịch vụ chăm sóc khách hàng!.';
 $smarty->assign('meta', $meta);
 
 $content = $smarty->fetch('contact.tpl');
