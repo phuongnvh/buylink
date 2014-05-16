@@ -114,8 +114,8 @@ EOF;
 			
 			if(isset($_GET[logout])){
 				$_SESSION = array();
-				if (isset($_COOKIE[session_name()])) {
-					setcookie(session_name(), '', time()-42000, '/');
+				if (isset($_COOKIE['login'])) {
+					setcookie('login', '', time()-2592000);
 				}
 				session_destroy();
 				header("location: ".$_config[www]."/account.php");
